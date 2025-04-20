@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  lmstudio:
+    image: ghcr.io/lmstudio-ai/lmstudio:latest
+    container_name: lmstudio
+    ports:
+      - "1234:1234"
+    volumes:
+      - ./models:/app/models
+    command: >
+      lmstudio serve --model /app/models/mistral.gguf --port 1234
+
+  agents_app:
+    build: .
+    container_name: lmstudio-agents
+    ports:
+      - "8501:8501"
+    depends_on:
+      - lmstudio
+    environment:
+      OPENAI_API_KEY: lm-studio
+      OPENAI_API_BASE: http://lmstudio:1234/v1
+      OPENAI_MODEL_NAME: mistral

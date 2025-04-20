@@ -1,0 +1,7 @@
+langchain
+langgraph
+openai
+fastapi
+uvicorn
+git+https://github.com/AcidicSoil/langgraph-cua-py.git
+git+https://github.com/langchain-ai/langgraph-bigtool.git

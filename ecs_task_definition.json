@@ -1,0 +1,37 @@
+{
+  "family": "lmstudio-agents-task",
+  "networkMode": "awsvpc",
+  "requiresCompatibilities": [
+    "FARGATE"
+  ],
+  "cpu": "1024",
+  "memory": "2048",
+  "containerDefinitions": [
+    {
+      "name": "lmstudio-agents",
+      "image": "your-dockerhub-username/lmstudio-agents:latest",
+      "portMappings": [
+        {
+          "containerPort": 8501,
+          "protocol": "tcp"
+        }
+      ],
+      "environment": [
+        {
+          "name": "OPENAI_API_KEY",
+          "value": "lm-studio"
+        },
+        {
+          "name": "OPENAI_API_BASE",
+          "value": "http://localhost:1234/v1"
+        },
+        {
+          "name": "OPENAI_MODEL_NAME",
+          "value": "mistral"
+        }
+      ],
+      "essential": true
+    }
+  ],
+  "executionRoleArn": "arn:aws:iam::<your-account-id>:role/ecsTaskExecutionRole"
+}

@@ -1,0 +1,29 @@
+Act as an expert AI tutor helping me build a modular autonomous AI pipeline.
+
+🧩 Goal:
+I want to build a modular autonomous AI agent pipeline powered by LangGraph and LangChain, integrating local LLMs from LM Studio for agentic workflows, RAG capabilities, dev tools, and memory. The system should enable research, reasoning, and IDE-style code workflows.
+
+🧰 Stack:
+- LM Studio (local LLM backend)
+- LangGraph / LangChain ecosystem
+- LangGraph BigTool, LangGraph CUA
+- Adeep (RAG + agent routing)
+- Local Deep Researcher
+- Mem0.ai (for memory)
+- IndyDevTools (coding interface)
+- Python (FastAPI + LangChain)
+
+🚀 Instructions:
+1. Give me a high-level overview of LM Studio and its role in the pipeline.
+2. List prerequisites for setting up LM Studio + LangGraph.
+3. Provide clear step-by-step setup instructions.
+4. Explain how to connect each tool to LM Studio or each other.
+5. Suggest optimizations like GPU usage, vector DBs, or memory persistence.
+6. Ask me if you need clarifications before proceeding.
+
+⚙️ Format your response with:
+- [Overview]
+- [Setup Steps]
+- [Integration Guidance]
+- [Enhancement Tips]
+- [Questions]
